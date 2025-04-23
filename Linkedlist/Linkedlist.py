@@ -56,12 +56,12 @@ class LinkedList:
                 temp = temp.next
 
 
-    def delet_last(self) -> None:
+    def delete_last(self) -> None:
         '''
                 Delet the tail of Linked List
         '''
         if self.head is None :
-            return "Linked List is Empty "
+            print("Linked List is Empty ")
         temp = self.head
         while True:
             if (temp.next).next is None:
@@ -69,12 +69,12 @@ class LinkedList:
                 break
             temp = temp.next
 
-    def delet(self ,data) -> None:
+    def delete(self ,data) -> None:
         '''
                 Delet element in Linked List By value
         '''
         if self.head is None :
-            return " Linked List is Empty "
+            print(" Linked List is Empty ")
         temp = self.head
         while True:
             if (temp.next).data == data:
@@ -82,7 +82,7 @@ class LinkedList:
                 temp.next = c
                 break
             temp = temp.next
-    def delet_head(self) -> None:
+    def delete_head(self) -> None:
         '''
                 Delet the head of Linked List
         '''
@@ -107,8 +107,7 @@ class LinkedList:
                 Return the length of the LinkedList
         '''
         if self.head == None :
-            print(0)
-            return None
+            return 0
         n=0
         temp = self.head 
         while temp.next is not None :
@@ -119,14 +118,14 @@ class LinkedList:
         '''
                 Return the max value in the Linkedlist
         '''
-        max = self.head
+        max_element = self.head
         temp = self.head
         while temp.next is not None :
-            if temp.data>max.data:
-                max = temp.data
+            if temp.data>max_element.data:
+                max_element = temp.data
             temp = temp.next 
         
-        return max
+        return max_element
     
     def print(self) -> str:
         '''
